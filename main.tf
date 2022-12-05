@@ -9,7 +9,7 @@ resource "random_string" "lb_id" {
 
 module "elb_http" {
   source  = "terraform-aws-modules/elb/aws"
-  version = "3.0.1"
+  version = "4.0.0"
 
   # Ensure load balancer name is unique
   name = "lb-${random_string.lb_id.result}-tutorial-example"
